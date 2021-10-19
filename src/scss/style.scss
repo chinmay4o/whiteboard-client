@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');
+
+$primary-font: Montserrat;
+$secondary-font: Poppins;
+
+// ======== reset =========
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+// ========= body =========
+
+body {
+    font-family: Montserrat;
+}
+
+/* ============ parent ============= */
+.parent {
+    width: 100vw;
+    min-height: calc(100vh - 50px);
+    background-color: #fff;
+    // margin-top: 80px;
+    overflow-x: hidden;
+}
+
+.layout-container {
+    width: 100vw;
+    max-width: 1500px;
+    margin: 0px auto;
+    background-color: #fff;
+    overflow-x: hidden;
+    display: flex;
+}
+
+
+/* ============ homepage ============= */
+
+.homepage-container {
+    padding: 50px;
+    margin: 0px auto;
+    // border: 5px solid #000;
+    height: calc(100vh - 50px);
+    width: calc(100% - 300px);
+    overflow: hidden;
+    position: relative;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+/* ============ sidebar ============= */
+
+.sidebar {
+    padding: 20px;
+    height: calc(100vh - 50px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgb(88, 91, 109);
+    transition: all 0.2s ease-in-out;
+
+    .btn-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr .2fr;
+        place-items: center;
+        margin-bottom: 20px;
+
+        .btn {
+            display: block;
+            width: 100px;
+            height: 30px;
+            background-color: #fff;
+            border: none;
+            font-size: .9rem;
+            padding: 0.3rem;
+            color: #000;
+            font-weight: 500;
+            font-family: montserrat;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            border-radius: 5px;
+
+            i {
+                margin-right: 7px;
+            }
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 2px 2px 10px #000;
+            }
+        }
+
+        .close-btn {
+            color: #fff;
+            font-size: 2rem;
+            margin-left: 30px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.4);
+            }
+        }
+    }
+
+    .img-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+
+        img {
+            width: 130px;
+            height: 120px;
+            cursor: pointer;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+
+    .open-btn {
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.4);
+        }
+
+    }
+
+}
+
+/* ============ topbar ============= */
+
+.topbar {
+    height: 50px;
+    border-bottom: 2px solid rgb(88, 90, 103);
+    width: 100%;
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+    grid-gap: 15px;
+
+    .tools {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 15px;
+        place-items: center;
+
+        i {
+            color: rgb(45, 49, 62);
+            font-size: 1.3rem;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+    }
+}
+
+
+/* ============ chat ============= */
+
+.chat-box {
+    display: inline-block;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    background-color: rgb(59, 64, 82);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 999;
+
+    .chat-btn {
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .chat-section {
+        display: inline-block;
+        position: fixed;
+        bottom: 15%;
+        right: 2%;
+        background-color: rgb(104, 104, 104);
+        border-radius: 7px;
+        color: #000;
+        height: 260px;
+        width: 300px;
+        padding: 20px;
+
+        .que {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .ans {
+            color: #000;
+            font-size: 14px;
+            font-weight: 500;
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
